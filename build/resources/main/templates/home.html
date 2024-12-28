@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+홈
+<div sec:authorize="isAuthenticated()">
+    <!-- 인증된 사용자만 볼수 있는 콘텐츠 -->
+    <!-- 사용자명의 실데이터가 이메일 -> name은 이메일로 체크되야함 -->
+    Welcome <span sec:authentication="name"></span>
+    <a href="/logout">로그아웃</a>
+</div>
+<a href="/login">로그인</a>
+
+</body>
+</html>
